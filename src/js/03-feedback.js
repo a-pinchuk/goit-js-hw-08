@@ -14,7 +14,7 @@ ref.messageField.addEventListener('input', throttle(setLocalStorage, 500));
 ref.forms.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  if (!ref.emailField.value && !ref.messageField.value) {
+  if (!ref.emailField.value || !ref.messageField.value) {
     return;
   }
 
